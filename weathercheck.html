@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stephanie Hsu -  WeatherCheck Reflection</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="navbar">
+            <ul>
+                <li class="icon"><a href="index.html">Steph<br>Hsu</a></li>
+                <div class="links">
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </ul>
+        </div>
+        
+        <div class="project-reflection">
+            <h1>Thoughts on my WeatherCheck project</h1>
+            <p class="project-reflection-blurb">
+                After reaching a point of being satisfied with my musixplore project, I wanted to also refresh my Python skills, as it had been a few
+                years since I had programmed in Python. After a quick tutorial, I decided to tackle a small project and ended up deciding to pick up 
+                Django as I already had an interest in web dev. In my search for projects to do, I had also stumbled upon the term "web scraping", and 
+                after some research, decided that it would be a good way of getting my data for this project.
+                <br><br>
+                The project itself was relatively straight forward, thanks to the many libraries available on Python and the power of the internet. 
+                The Beautiful Soup Python Library was used to parse the data I had scraped off of Google and a quick search on the internet showed 
+                me how to web scrap Google's weather data. After adding some template conditional rendering, a function to compare sunset time with
+                current time, and some CSS styles, I was ready to push it onto GitHub. However, I shortly realized that GitHub Pages, my usual website 
+                hosting platform, did not support Django apps because they are not a static page. I decided to use Heroku instead, but actually had a 
+                lot of issues dealing with properly deploying the static resources of my project. Eventually, I sorted it all out thanks to Stack 
+                Overflow.
+                <br><br>
+                Overall, I am satisfied with the end product. The UI is simple and the search function works well. There are, of course, other features 
+                that I would like to implement in the near future, such as:
+                <ul class="future-features">
+                    <li>a settings page to toggle temperature from Celsius to Farenheit and the UI from light mode to dark mode</li>
+                    <li>the weather for the coming 7 days</li>
+                    <li>warnings for thunderstorms, tornados, hurricanes, etc.</li>
+                </ul>
+            </p>
+        </div>
+    </body>
+</html>

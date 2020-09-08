@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes slidein-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* @keyframes slidein-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+} */
+
+body {
+    width: 75%;
+    margin: auto;
+    max-width: 900px;
+    color: #1C2833;
+}
+
+.navbar {
+    margin: 4% 0%;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar .icon a:link {
+    float: left;
+    font-family: 'Carter One', cursive;
+    font-size: 20px;
+    border: 3px solid #1C2833;
+    padding: 0px 3px;
+    text-align: right;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.navbar .icon a:visited {
+    color: #1C2833;
+}
+
+.navbar .icon a:hover {
+    color: #00CED1;
+    border-color: #00CED1;
+}
+
+.navbar .links li a {
+    float: right;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.navbar .links li a:link {
+    color: #1C2833;
+}
+
+.navbar .links li a:visited {
+    color: #1C2833;
+}
+
+.navbar .links li a:hover {
+    color: #00CED1;
+}
+
+.intro-blurb {
+    padding-top: 10%;
+    text-align: center;
+    line-height: 1.6;
+    animation: 1.4s slidein-left;
+}
+
+.intro-blurb h1 {
+    font-family: 'Carter One', cursive;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.intro-blurb p {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.intro-blurb a:link {
+    text-decoration: underline;
+    color: #1C2833;
+}
+
+.intro-blurb a:visited {
+    text-decoration: underline;
+    color: #1C2833;
+}
+
+.intro-blurb a:hover {
+    color: #00CED1;
+}
+
+.about-moi, .travaille, .more-about-moi, .co-op-reflection, .project-reflection {
+    margin: 5% 0 10%;
+}
+
+.about-moi h1, .more-about-moi h1{
+    font-family: 'Carter One', cursive;
+    font-size: 50px;
+    padding-bottom: 10px;
+    margin-right: 50%;
+    animation: 1.4s slidein-left;
+}
+
+.about-moi-blurb {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-right: 50%;
+}
+
+.about-moi-blurb a:link, .more-about-moi-blurb a:link{
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: #1C2833;
+}
+
+.about-moi-blurb a:visited, .more-about-moi-blurb a:visited {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: #1C2833;
+}
+
+.about-moi-blurb a:hover, .more-about-moi-blurb a:hover {
+    color: #00CED1;
+}
+
+.about-moi img {
+    float: right;
+    margin-top: 7.5%;
+    width: 38%;
+    height: auto;
+}
+
+.travaille h1, .co-op-reflection h1, .project-reflection h1{
+    font-family: 'Carter One', cursive;
+    font-size: 50px;
+    padding-bottom: 10px;
+    animation: 1.4s slidein-left;
+}
+
+.development-chunk p {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.development-chunk .p-bolded {
+    font-weight: 700;
+}
+
+.development-chunk, .experiences-chunk{
+    padding-bottom: 20px;
+}
+
+.experiences-chunk h2, .projects-chunk h2 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-family: 'Carter One', cursive;
+    font-size: 40px;
+}
+
+.experience, .project {
+    margin-right: 15%;
+    /* border: 2px solid black; */
+    transition: transform 380ms ease-in-out;
+}
+
+.experience-and-pic, .project-and-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.experience:hover, .project:hover{
+    transform: translateX(25px);
+}
+
+img.picc{
+    width: 40%;
+    height: auto;
+    padding: 10px 0 10px;
+    visibility: hidden;
+    /* border: 2px solid black; */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.38s linear;
+
+}
+
+img.icon{
+    width: 30%;
+    height: auto;
+    padding: 10px 0 10px;
+    visibility: hidden;
+    /* border: 2px solid black; */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.38s linear;
+
+}
+
+.experience:hover ~ img.picc{
+    visibility: visible;
+    opacity: 1;
+}
+
+.project:hover ~ img.icon{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.experience-heading, .project-heading {
+    font-family: 'Carter One', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}    
+
+.experience-company, .project-deets-1 {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.experience-deets, .project-deets {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+}
+  
+.experience-summ, .project-summ, .reflection, .githublinker {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    padding-top: 10px;
+}
+ 
+.project a, .experience a {
+    text-decoration: underline;
+    color: #1C2833;
+}
+
+.project a:visited , .experience a:visited {
+    color: #1C2833;
+}
+
+.project a:hover, .experience a:hover {
+    color: #00CED1;
+}
+
+.more-about-moi h2 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-family: 'Carter One', cursive;
+    font-size: 40px;
+}
+
+.more-about-moi-blurb, .co-op-reflection-blurb, .project-reflection-blurb {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.future-features{
+    padding-top: 25px;
+    padding-left: 20px;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 18px;
+    line-height: 2;
+}
