@@ -17,6 +17,7 @@
     }
 }
 
+/* might use in the future */
 /* @keyframes slidein-right {
     0% {
         transform: translateX(100%);
@@ -191,7 +192,6 @@ body {
 
 .experience, .project {
     margin-right: 15%;
-    /* border: 2px solid black; */
     transition: transform 380ms ease-in-out;
 }
 
@@ -210,18 +210,15 @@ img.picc{
     height: auto;
     padding: 10px 0 10px;
     visibility: hidden;
-    /* border: 2px solid black; */
     opacity: 0;
     transition: visibility 0s, opacity 0.38s linear;
-
 }
 
 img.icon{
     width: 30%;
-    height: auto;
-    padding: 10px 0 10px;
+    height: 20%;
+    padding: 40px 0 10px;
     visibility: hidden;
-    /* border: 2px solid black; */
     opacity: 0;
     transition: visibility 0s, opacity 0.38s linear;
 
